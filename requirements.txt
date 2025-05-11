@@ -1,7 +1,2 @@
 flask
 openai
-flask-cors
-openai
-openai
-pydantic
-requests
