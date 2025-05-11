@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         try {
             // Send message to server
-            const response = await fetch('/api/message', {
+            const response = await fetch('/chat', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
             hideTypingIndicator();
             
             // Add bot response to chat
-            appendMessage('bot', data.response);
+            appendMessage('bot', data.reply);
             
             // Scroll to bottom of chat
             scrollToBottom();
