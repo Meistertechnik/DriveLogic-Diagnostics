@@ -71,5 +71,34 @@ def reset_chat():
     session['chat_history'] = []
     return jsonify({'message': 'Chat history reset successfully'})
 
+@app.route('/api/capabilities')
+def capabilities():
+    """Return a list of the chatbot's capabilities"""
+    capabilities = {
+        'capabilities': [
+            {
+                'name': 'Conversation',
+                'description': 'Have a simple text-based conversation with the chatbot',
+                'examples': ['Hello', 'How are you?', 'What can you do?']
+            },
+            {
+                'name': 'Jokes',
+                'description': 'Get a random joke',
+                'examples': ['Tell me a joke', 'Say something funny', 'Make me laugh']
+            },
+            {
+                'name': 'Time and Date',
+                'description': 'Get the current time and date',
+                'examples': ['What time is it?', 'What is the date today?', 'What day of the week is it?']
+            },
+            {
+                'name': 'Facts',
+                'description': 'Learn a random interesting fact',
+                'examples': ['Tell me a fact', 'Share something interesting', 'I want to learn something']
+            }
+        ]
+    }
+    return jsonify(capabilities)
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)

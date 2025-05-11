@@ -74,7 +74,14 @@
                 
                 <!-- Info text -->
                 <div class="text-center mt-3 text-muted">
-                    <small>This is a simple chatbot demonstration. Try asking a question!</small>
+                    <small>This is a chatbot demonstration. Try these commands:</small>
+                    <div class="d-flex flex-wrap justify-content-center mt-2 gap-2">
+                        <span class="badge bg-secondary" style="cursor: pointer;" onclick="suggestMessage('Hello')">Say Hello</span>
+                        <span class="badge bg-secondary" style="cursor: pointer;" onclick="suggestMessage('Tell me a joke')">Tell me a joke</span>
+                        <span class="badge bg-secondary" style="cursor: pointer;" onclick="suggestMessage('What time is it?')">What time is it?</span>
+                        <span class="badge bg-secondary" style="cursor: pointer;" onclick="suggestMessage('Tell me a fact')">Tell me a fact</span>
+                        <span class="badge bg-secondary" style="cursor: pointer;" onclick="suggestMessage('What can you do?')">What can you do?</span>
+                    </div>
                 </div>
             </div>
         </div>

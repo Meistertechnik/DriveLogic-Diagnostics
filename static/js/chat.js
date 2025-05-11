@@ -162,4 +162,11 @@ document.addEventListener('DOMContentLoaded', function() {
     function scrollToBottom() {
         chatContainer.scrollTop = chatContainer.scrollHeight;
     }
+    
+    // Make suggestMessage available globally
+    window.suggestMessage = function(text) {
+        userInput.value = text;
+        sendButton.disabled = false;
+        userInput.focus();
+    };
 });
